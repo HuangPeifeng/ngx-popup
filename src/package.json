@@ -1,0 +1,16 @@
+{
+  "name": "@hamastar/ngx-popup",
+  "version": "0.0.10",
+  "author": "Peifeng",
+  "license": "MIT",
+  "description": "",
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+      "entryFile": "public_api.ts",
+      "styleIncludePaths": ["./src/assets/close.png"]
+    },
+    "dest": "../dist"
+  },
+  "whitelistedNonPeerDependencies": ["."]
+}
