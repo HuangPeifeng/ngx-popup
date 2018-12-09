@@ -1,6 +1,6 @@
 {
-  "name": "@hamastar/ngx-popup",
-  "version": "1.0.3",
+  "name": "ngx-popup",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
