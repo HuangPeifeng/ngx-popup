@@ -6,21 +6,17 @@
     height: 100vh;
     background-color: #0000004d;
     z-index: 1000;
-    display: none;
-
-    &.flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .popup-block {
         background-color: #ffffff;
-        width: 300px;
-        height: 300px;
         border-radius: 10px;
         box-shadow: 0px 0px 50px 0px rgba(156, 156, 156, 1);
         padding: 1em;
+        display: flex;
+        flex-direction: column;
 
         .popup-close {
             display: flex;
@@ -33,14 +29,39 @@
             font-family: Microsoft JhengHei;
             min-height: 36px;
 
-            img {
+            .close-btn {
+                // background-image: url('/assets/close.png');
+                // background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                width: 36px;
+                height: 36px;
                 cursor: pointer;
                 opacity: 0.5;
 
                 &:hover {
                     opacity: 1;
                 }
+
+                span {
+                    height: 3px;
+                    background-color: #000000;
+                    margin: 3px;
+
+                    &.left {
+                        transform: rotate(45deg) translate(8px, 7.5px);
+                    }
+
+                    &.right {
+                        transform: rotate(-45deg) translate(-1px, 2px);
+                    }
+                }
             }
+        }
+
+        .popup-content {
+            height: 100%;
+            overflow-y: auto;
         }
     }
 }

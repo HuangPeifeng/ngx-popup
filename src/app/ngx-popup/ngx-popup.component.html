@@ -1,9 +1,14 @@
-<div [ngClass]="{ 'flex': popupIsShow }" class="popup-layout" (click)="closePopupByOut($event)">
-  <div class="popup-block" [ngStyle]="getBlockStyle()">
-    <span class="popup-close">
-      <label [ngStyle]="{ color: option.titleColor }">{{ option.title }}</label>
-      <img src="assets/close.png" (click)="closePopup()">
+<div class="popup-layout" *ngFor="let popup of popupList" (click)="closePopupByOut($event, popup)">
+  <div class="popup-block" [ngStyle]="getBlockStyle(popup)">
+    <span class="popup-close" *ngIf="popup.option.showHeader">
+      <label [ngStyle]="{ color: popup.option.titleColor }">{{ popup.option.title }}</label>
+      <span class="close-btn" (click)="closePopup(popup)">
+        <span class="left" [ngStyle]="{ 'background-color': popup.option.closeBtnColor }"></span>
+        <span class="right" [ngStyle]="{ 'background-color': popup.option.closeBtnColor }"></span>
+      </span>
     </span>
-    <ng-template ngxPopup></ng-template>
+    <div class="popup-content">
+      <ng-template ngxPopup></ng-template>
+    </div>
   </div>
 </div>
