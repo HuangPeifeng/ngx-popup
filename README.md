@@ -5,7 +5,7 @@ NgxPopup
 ## 安裝
 
 ```bash
-npm install @hamastar/ngx-popup
+npm install pf-ngx-popup
 ```
 
 ## 引用
